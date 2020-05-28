@@ -1,0 +1,246 @@
+#chrome {
+  position: absolute;
+  top: 175px;
+  left: 275px;
+  min-width: 320px;
+  min-height: 200px;
+  width: 640px;
+  height: 480px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.chrome-window {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.window-header {
+  height: 35px;
+  background-color: #dee1e6;
+  display: flex;
+  justify-content: space-between;
+}
+.chrome-header-tools {
+  display: flex;
+}
+.chrome-header-tools .fa,
+.chrome-header-tools .chrome-icon {
+  height: 100%;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+.chrome-tabs {
+  background-color: #dee1e6;
+  color: #3c4043;
+  height: 100%;
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
+}
+.chrome-tabs > .chrome-icon-plus {
+  margin-left: 10px;
+}
+.chrome-tab {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  font-size: 14px;
+  max-width: 150px;
+  width: 150px;
+  position: relative;
+}
+.chrome-tab .chrome-icon-close {
+  position: absolute;
+  right: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.chrome-tab:after {
+  content: '';
+  height: 24px;
+  width: 1px;
+  background-color: #8b8e92;
+  position: absolute;
+  right: 0;
+}
+.chrome-tab.active {
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.chrome-tab.last-active:after {
+  display: none;
+}
+.chrome-tab.active:before {
+  content: '';
+  background-image: url(../../img/application/chrome/tab-left.jpg);
+  background-size: 100% 100%;
+  background-position: left;
+  position: absolute;
+  height: 100%;
+  width: 10px;
+  left: -10px;
+}
+.chrome-tab.active:after {
+  display: block;
+  content: '';
+  background-image: url(../../img/application/chrome/tab-right.jpg);
+  background-size: 100% 100%;
+  background-position: left;
+  position: absolute;
+  height: 100%;
+  width: 10px;
+  right: -10px;
+}
+
+.chrome-tab .favicon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.chrome-tab .fa-close {
+  float: right;
+}
+.window-nav {
+  height: 38px;
+  border-bottom: 1px solid #dadce0;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chrome-histroy-tool {
+  display: flex;
+  margin-right: 10px;
+}
+.chrome-histroy-tool .fa {
+  margin: 0 8px;
+}
+.chrome-address {
+  height: 100%;
+  border-radius: 30px;
+  background-color: #f1f3f4;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  color: #5f6368;
+}
+.chrome-address input {
+  border: none;
+  outline: none;
+  background-color: #f1f3f4;
+  color: #000;
+  border-left: 1px solid #9c9c9e;
+  padding: 0 10px;
+  margin-left: 10px;
+  flex: 1 1 auto;
+  font-size: 14px;
+}
+.chrome-nav-tool {
+  display: flex;
+  margin-left: 15px;
+}
+.chrome-nav-tool .chrome-icon {
+  width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 50%;
+}
+.window-body {
+  flex: 1 1 auto;
+}
+.chrome-page {
+  width: 100%;
+  height: 100%;
+}
+.chrome-page iframe {
+  width: 100%;
+  height: 100%;
+}
+.chrome-icon-user {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #44299b;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+}
+.chrome-icon {
+  font-style: inherit;
+}
+.chrome-icon-more {
+  text-align: center;
+}
+.chrome-icon-more:after {
+  content: '•\A•\A•';
+  color: #5f6368;
+  width: 12px;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 6px;
+}
+.chrome-icon {
+  font-style: initial;
+}
+.chrome-icon-spread {
+  position: relative;
+}
+.chrome-icon-spread:after,
+.chrome-icon-spread:before {
+  background-color: #dee1e6;
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #000;
+}
+.chrome-icon-spread:after {
+  position: relative;
+  z-index: 3;
+}
+.chrome-icon-spread:before {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  z-index: 0;
+}
+.chrome-header-tools .chrome-icon-minus {
+  line-height: 25px;
+}
+.chrome-icon-minus:before {
+  width: 12px;
+  height: 1px;
+  background-color: #000;
+  content: '';
+  display: inline-block;
+}
+.chrome-icon-plus {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  position: relative;
+}
+.chrome-icon-plus:after,
+.chrome-icon-plus:before {
+  content: '';
+  display: inline-block;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.chrome-icon-plus:after {
+  width: 12px;
+  height: 2px;
+}
+.chrome-icon-plus:before {
+  height: 12px;
+  width: 2px;
+}
